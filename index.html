@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="manifest" href="/manifest.json" />
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "0176567f-8774-4eaa-bb62-e9db8ec25d9c",
-    });
-    OneSignal.isPushNotificationsEnabled(function(isEnabled) {
-    if (isEnabled)
-      console.log("Push notifications are enabled!");
-    else
-      console.log("Push notifications are not enabled yet.");    
-    });
-               
-   OneSignal.isPushNotificationsEnabled().then(function(isEnabled) {
-    if (isEnabled)
-      console.log("Push notifications are enabled!");
-    else
-      console.log("Push notifications are not enabled yet.");      
-    });
-	
-    OneSignal.showHttpPrompt();
-  });
-</script>
 </head>
 <body>
 
 <h1>Test one Signal</h1>
 
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCh9sPWedtjJdtak95addte9ieV85fsgnU",
+    authDomain: "cumicumi-178907.firebaseapp.com",
+    databaseURL: "https://cumicumi-178907.firebaseio.com",
+    projectId: "cumicumi-178907",
+    storageBucket: "cumicumi-178907.appspot.com",
+    messagingSenderId: "994613042270"
+  };
+  firebase.initializeApp(config);
+</script>
 </body>
 </html>
